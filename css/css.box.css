@@ -1,7 +1,8 @@
-.box{
+.box1, .box2{
     width: 200px;
     height: 200px;
     background-color: #7788ff;
+    color: #99ffaa;
     text-align: center;
     line-height: 200px;
     font-size: 24px;
@@ -10,4 +11,14 @@
     box-sizing: border-box;
     padding: 10px;
     font-family: 'Moon Dance', cursive;
+}
+.box2{
+    background-image: url(../images/20230108.jpg);
+    background-size:cover;
+}
+.btn{
+    background-color: #af68ac;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
 }
