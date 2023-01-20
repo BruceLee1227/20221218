@@ -1,0 +1,44 @@
+*,
+*::before,
+*::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.block {
+    width: 1000px;
+    height: 1000px;
+    margin: 20px auto;
+    background-color: rgba(216, 195, 124, 0.653);
+}
+
+.cube {
+    width: 100px;
+    height: 100px;
+    background-color: rgb(48, 166, 78);
+    border: 1px solid black;
+    line-height: 100px;
+    text-align: center;
+}
+
+.static {
+    position: static;
+    background-color: rgb(72, 163, 196);
+}
+
+.relative {
+    position: relative;
+    background-color: rgb(252, 17, 17);
+}
+
+.absolute {
+    position: absolute;
+    background-color: rgb(223, 168, 15);
+    z-index: 2;
+}
+
+.fixed {
+    position: fixed;
+    background-color: rgb(209, 206, 69);
+}
