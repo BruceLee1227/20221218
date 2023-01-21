@@ -1,0 +1,20 @@
+*,
+*::before,
+*::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.header {
+    background-color: rgb(183, 99, 99);
+}
+
+.content {
+    background-color: rgb(87, 128, 74);
+    height: 100vh;
+}
+
+.footer {
+    background-color: rgb(240, 36, 36);
+}
