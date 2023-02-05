@@ -1,0 +1,37 @@
+*,
+*::before,
+*::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+h1{
+    text-align: center;
+    margin-bottom: 10px;
+}
+.flex{
+    width: 90%;
+    margin: 0 auto;
+    background-color: #78ecd3;
+    display: flex;
+    text-align: center;
+}
+.flex-item{
+    width: 100px;
+    height: 100px;
+    background-color: #e44141;
+    margin: 10px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.direction{
+    /* coloum:由上到下 */
+    flex-direction: column;
+    /* columb-reverse:由下到上  */
+    flex-direction: column-reverse;
+    /* row:由左到右 (預設) */
+    flex-direction: row;
+    /* row-reverse: 由右到左 */
+    flex-direction: row-reverse;
+}
