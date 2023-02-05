@@ -1,0 +1,28 @@
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.pesudo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #69d3d6;
+  margin: 50px auto;
+  font-size: 30px;
+}
+.pesudo a {
+  text-decoration: none;
+  color: #ddf1e5;
+}
+.pesudo:hover {
+  cursor: pointer;
+  background-color: #ec4141;
+  transform: scale(1.5);
+}/*# sourceMappingURL=pesudo.css.map */
