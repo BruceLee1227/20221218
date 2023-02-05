@@ -21,7 +21,7 @@ h1{
     width: 100px;
     height: 100px;
     background-color: #e44141;
-    margin: 10px 10px;
+    margin: 0px 10px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -71,4 +71,16 @@ h1{
     align-content: space-between;
     /* space-evenly: 平均分散*/
     align-content: space-evenly;
+}
+.align-items{
+    /* stretch: 高度延伸，內容區塊有設定高度時，則依據高度為主 (預設)*/
+    align-items: stretch;
+    /* baseline: 內容基準線*/
+    align-items: baseline;
+    /* flex-start: 靠上 */
+    align-items: flex-start;
+    /* flex-end:靠下 */
+    align-items: flex-end;
+    /* center: 置中 */
+    align-items: center;
 }
