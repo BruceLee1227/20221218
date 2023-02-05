@@ -10,7 +10,7 @@ h1{
     margin-bottom: 10px;
 }
 .flex{
-    width: 90%;
+    width: 800px;
     margin: 0 auto;
     background-color: #78ecd3;
     display: flex;
@@ -34,4 +34,12 @@ h1{
     flex-direction: row;
     /* row-reverse: 由右到左 */
     flex-direction: row-reverse;
+}
+.wrap{
+    /* 不換行，內容寬高會自動調整 (預設) */
+    flex-wrap: nowrap;
+    /* 換行 */
+    flex-wrap: wrap;
+    /* 換行 上下反轉 */
+    flex-wrap: wrap-reverse;
 }
