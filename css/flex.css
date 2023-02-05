@@ -36,10 +36,22 @@ h1{
     flex-direction: row-reverse;
 }
 .wrap{
-    /* 不換行，內容寬高會自動調整 (預設) */
+    /* nowrap:不換行，內容寬高會自動調整 (預設) */
     flex-wrap: nowrap;
-    /* 換行 */
+    /* wrap:換行 */
     flex-wrap: wrap;
     /* 換行 上下反轉 */
     flex-wrap: wrap-reverse;
+}
+.justify{
+    /* flex-end:靠左 (預設) */
+    justify-content: flex-start;
+    /* flex-end: 靠右*/
+    justify-content: flex-end;
+    /* space-around: 左右平均寬度分散 */
+    justify-content: space-around;
+    /* space-between: 左右貼平分散 */
+    justify-content: space-between;
+    /* space-evenly: 平均分散 */
+    justify-content: space-evenly;
 }
