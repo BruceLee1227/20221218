@@ -1,0 +1,15 @@
+@import 'reset';
+.before{
+    &::before{
+        content:"Bruce";
+        width: 150px;
+        height: 150px;
+        background-color: #b97b7b;
+    }
+}
+.after{
+    padding: 5px;
+    &::after{
+        content:"20";
+    }
+}

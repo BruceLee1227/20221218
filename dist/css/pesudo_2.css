@@ -1,0 +1,21 @@
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.before::before {
+  content: "Bruce";
+  width: 150px;
+  height: 150px;
+  background-color: #b97b7b;
+}
+
+.after {
+  padding: 5px;
+}
+.after::after {
+  content: "20";
+}/*# sourceMappingURL=pesudo_2.css.map */
