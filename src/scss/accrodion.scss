@@ -56,7 +56,9 @@
                 }
             }
             // 屬性選擇器解決方案
-            
+            // >input[type="radio"],input[type="checkbox"]{
+            //     display: none;
+            // }
         }
     }
 }
