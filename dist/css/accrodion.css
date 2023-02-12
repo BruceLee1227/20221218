@@ -34,9 +34,18 @@
   padding: 10px;
   display: none;
 }
-.accrodion .tab > input:checked + .tab-container {
-  display: block;
+.accrodion .tab > input {
+  display: none;
 }
 .accrodion .tab .minus {
   display: none;
+}
+.accrodion .tab > input:checked + label .plus {
+  display: none;
+}
+.accrodion .tab > input:checked + label .minus {
+  display: block;
+}
+.accrodion .tab > input:checked + label ~ .tab-container {
+  display: block;
 }/*# sourceMappingURL=accrodion.css.map */

@@ -5,6 +5,7 @@
     margin:  20px auto;
     .tab{
         border: 1px solid #1459e3;
+        // 預設樣式
         >label{
             display: flex;
             justify-content: space-between;
@@ -24,12 +25,27 @@
             padding: 10px;
             display: none;
         }
-        >input:checked+.tab-container{
-            display: block;
+        >input{
+            display: none;
         }
         .minus{
             display: none;
         }
+        // 點擊時產生的變化
+        >input:checked{
+            +label{
+                .plus{
+                    display: none;
+                }
+                .minus{
+                    display: block;
+                }
+                ~.tab-container{
+                    display: block;
+                }
+            }
+        }
+        
     }
 }
  
