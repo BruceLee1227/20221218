@@ -2,16 +2,24 @@
 
 body{
     background-color: #505068;
+    height: 1000vh;
 }
 .header{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 5px;
-    background-color: #fff;
-    border-radius: 10px;
-    border-top-right-radius: 0 ;
-    border-top-left-radius: 0;
+    // 固定header-content在畫面的位置
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    .header-content{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 10px;
+        border-top-right-radius: 0 ;
+        border-top-left-radius: 0;
+    }
 }
 .menu{
     display: flex;

@@ -23,13 +23,20 @@ a {
 
 body {
   background-color: #505068;
+  height: 1000vh;
 }
 
 .header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+.header .header-content {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 5px;
+  padding: 20px;
   background-color: #fff;
   border-radius: 10px;
   border-top-right-radius: 0;
