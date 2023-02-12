@@ -40,8 +40,10 @@
                 display: none;
             }
             // 點擊時產生的變化
-            >input:checked{
+            >sit:checked{
+                
                 +label{
+                    background-color: #865858;
                     .plus{
                         display: none;
                     }
@@ -53,6 +55,7 @@
                     }
                 }
             }
+            // 屬性選擇器解決方案
             
         }
     }

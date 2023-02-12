@@ -47,12 +47,15 @@
 .container .accrodion .tab .minus {
   display: none;
 }
-.container .accrodion .tab > input:checked + label .plus {
+.container .accrodion .tab > sit:checked + label {
+  background-color: #865858;
+}
+.container .accrodion .tab > sit:checked + label .plus {
   display: none;
 }
-.container .accrodion .tab > input:checked + label .minus {
+.container .accrodion .tab > sit:checked + label .minus {
   display: block;
 }
-.container .accrodion .tab > input:checked + label ~ .tab-container {
+.container .accrodion .tab > sit:checked + label ~ .tab-container {
   display: block;
 }/*# sourceMappingURL=accrodion.css.map */

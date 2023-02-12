@@ -9,9 +9,10 @@
 </head>
 <body>
     <div class="container">
+        <h1>多個展開</h1>
         <div class="accrodion">
             <div class="tab">
-                <input type="checkbox" id="tab-1">
+                <input type="checkbox" id="tab-1" class="switch">
                 <label for="tab-1">
                     <div>One</div>
                     <div class="plus">+</div>
@@ -20,13 +21,34 @@
                 <div class="tab-container">Hi</div>
             </div>
             <div class="tab">
-                <input type="checkbox" id="tab-2">
+                <input type="checkbox" id="tab-2" class="switch">
                 <label for="tab-2">
                     <div>Two</div>
                     <div class="plus">+</div>
                     <div class="minus">-</div>
                 </label>
                 <div class="tab-container">See you</div>
+            </div>
+        </div>
+        <h1>單個展開</h1>
+        <div class="accrodion">
+            <div class="tab">
+                <input type="radio" id="tab-3" name="single" class="switch">
+                <label for="tab-3">
+                    <div>Question1</div>
+                    <div class="plus">+</div>
+                    <div class="minus">-</div>
+                </label>
+                <div class="tab-container">Answer1</div>
+            </div>
+            <div class="tab">
+                <input type="radio" id="tab-4" name="single" class="switch">
+                <label for="tab-4">
+                    <div>Question2</div>
+                    <div class="plus">+</div>
+                    <div class="minus">-</div>
+                </label>
+                <div class="tab-container">Answer2</div>
             </div>
         </div>
     </div>
