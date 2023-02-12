@@ -4,7 +4,12 @@
     width: 80%;
     margin:  20px auto;
     .tab{
-        border: 1px solid #1459e3;
+        border: 2px solid #1459e3;
+        border-bottom-width: none;
+        // 處理底部邊線重疊問題
+        &:last-child{
+            border-bottom: 2px solid red;
+        }
         // 預設樣式
         >label{
             display: flex;
@@ -12,13 +17,16 @@
             background-color: #e26565;
             color: antiquewhite;
             padding: 16px;
-            font-size: 20px;
+            font-size: 50px;
             font-weight: bold;
             font-family: 'Times New Roman', Times, serif;
             cursor: pointer;
             user-select: none;
             &:hover{
                 background-color: #865858;
+            }
+            >.plus{
+                color: black;
             }
         }
         .tab-container{

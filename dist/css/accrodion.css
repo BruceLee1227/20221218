@@ -11,7 +11,11 @@
   margin: 20px auto;
 }
 .accrodion .tab {
-  border: 1px solid #1459e3;
+  border: 2px solid #1459e3;
+  border-bottom-width: none;
+}
+.accrodion .tab:last-child {
+  border-bottom: 2px solid red;
 }
 .accrodion .tab > label {
   display: flex;
@@ -19,7 +23,7 @@
   background-color: #e26565;
   color: antiquewhite;
   padding: 16px;
-  font-size: 20px;
+  font-size: 50px;
   font-weight: bold;
   font-family: "Times New Roman", Times, serif;
   cursor: pointer;
@@ -29,6 +33,9 @@
 }
 .accrodion .tab > label:hover {
   background-color: #865858;
+}
+.accrodion .tab > label > .plus {
+  color: black;
 }
 .accrodion .tab .tab-container {
   padding: 10px;
