@@ -6,18 +6,18 @@
   box-sizing: border-box;
 }
 
-.accrodion {
+.container {
   width: 80%;
   margin: 20px auto;
 }
-.accrodion .tab {
-  border: 2px solid #1459e3;
-  border-bottom-width: none;
+.container .accrodion .tab {
+  border: 1px solid #1459e3;
+  border-bottom-width: 0;
 }
-.accrodion .tab:last-child {
-  border-bottom: 2px solid red;
+.container .accrodion .tab:last-child {
+  border-bottom: 1px solid red;
 }
-.accrodion .tab > label {
+.container .accrodion .tab > label {
   display: flex;
   justify-content: space-between;
   background-color: #e26565;
@@ -31,28 +31,28 @@
      -moz-user-select: none;
           user-select: none;
 }
-.accrodion .tab > label:hover {
+.container .accrodion .tab > label:hover {
   background-color: #865858;
 }
-.accrodion .tab > label > .plus {
+.container .accrodion .tab > label > .plus {
   color: black;
 }
-.accrodion .tab .tab-container {
+.container .accrodion .tab .tab-container {
   padding: 10px;
   display: none;
 }
-.accrodion .tab > input {
+.container .accrodion .tab > input {
   display: none;
 }
-.accrodion .tab .minus {
+.container .accrodion .tab .minus {
   display: none;
 }
-.accrodion .tab > input:checked + label .plus {
+.container .accrodion .tab > input:checked + label .plus {
   display: none;
 }
-.accrodion .tab > input:checked + label .minus {
+.container .accrodion .tab > input:checked + label .minus {
   display: block;
 }
-.accrodion .tab > input:checked + label ~ .tab-container {
+.container .accrodion .tab > input:checked + label ~ .tab-container {
   display: block;
 }/*# sourceMappingURL=accrodion.css.map */
