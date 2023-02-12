@@ -12,6 +12,15 @@
   margin: 0px auto;
 }
 
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
 .pesudo {
   display: flex;
   justify-content: center;
@@ -50,4 +59,4 @@
 }
 .students tbody tr:last-child td {
   background-color: yellowgreen;
-}/*# sourceMappingURL=pesudo.css.map */
+}

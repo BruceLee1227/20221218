@@ -12,6 +12,15 @@
   margin: 0px auto;
 }
 
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
 .before::before {
   content: "Bruce";
   width: 150px;
@@ -24,4 +33,4 @@
 }
 .after::after {
   content: "20";
-}/*# sourceMappingURL=pesudo_2.css.map */
+}

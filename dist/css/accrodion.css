@@ -12,6 +12,15 @@
   margin: 0px auto;
 }
 
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
 .container {
   width: 80%;
   margin: 20px auto;
@@ -33,9 +42,7 @@
   font-weight: bold;
   font-family: "Times New Roman", Times, serif;
   cursor: pointer;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-          user-select: none;
+  user-select: none;
 }
 .container .accrodion .tab > label:hover {
   background-color: #865858;
@@ -53,15 +60,15 @@
 .container .accrodion .tab .minus {
   display: none;
 }
-.container .accrodion .tab > sit:checked + label {
+.container .accrodion .tab .switch:checked + label {
   background-color: #865858;
 }
-.container .accrodion .tab > sit:checked + label .plus {
+.container .accrodion .tab .switch:checked + label .plus {
   display: none;
 }
-.container .accrodion .tab > sit:checked + label .minus {
+.container .accrodion .tab .switch:checked + label .minus {
   display: block;
 }
-.container .accrodion .tab > sit:checked + label ~ .tab-container {
+.container .accrodion .tab .switch:checked + label ~ .tab-container {
   display: block;
-}/*# sourceMappingURL=accrodion.css.map */
+}
