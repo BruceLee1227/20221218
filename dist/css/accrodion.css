@@ -15,6 +15,7 @@
 }
 .accrodion .tab > label {
   display: flex;
+  justify-content: space-between;
   background-color: #e26565;
   color: antiquewhite;
   padding: 16px;
@@ -29,6 +30,13 @@
 .accrodion .tab > label:hover {
   background-color: #865858;
 }
-.accrodion .tab-container {
+.accrodion .tab .tab-container {
   padding: 10px;
+  display: none;
+}
+.accrodion .tab > input:checked + .tab-container {
+  display: block;
+}
+.accrodion .tab .minus {
+  display: none;
 }/*# sourceMappingURL=accrodion.css.map */

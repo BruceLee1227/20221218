@@ -7,6 +7,7 @@
         border: 1px solid #1459e3;
         >label{
             display: flex;
+            justify-content: space-between;
             background-color: #e26565;
             color: antiquewhite;
             padding: 16px;
@@ -19,11 +20,16 @@
                 background-color: #865858;
             }
         }
-    }
-    
-    .tab-container{
-        padding: 10px;
+        .tab-container{
+            padding: 10px;
+            display: none;
+        }
+        >input:checked+.tab-container{
+            display: block;
+        }
+        .minus{
+            display: none;
+        }
     }
 }
-
  
