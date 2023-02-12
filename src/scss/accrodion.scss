@@ -1,0 +1,29 @@
+@import "reset.scss";
+
+.accrodion {
+    width: 80%;
+    margin:  20px auto;
+    .tab{
+        border: 1px solid #1459e3;
+        >label{
+            display: flex;
+            background-color: #e26565;
+            color: antiquewhite;
+            padding: 16px;
+            font-size: 20px;
+            font-weight: bold;
+            font-family: 'Times New Roman', Times, serif;
+            cursor: pointer;
+            user-select: none;
+            &:hover{
+                background-color: #865858;
+            }
+        }
+    }
+    
+    .tab-container{
+        padding: 10px;
+    }
+}
+
+ 
