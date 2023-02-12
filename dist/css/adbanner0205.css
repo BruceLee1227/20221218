@@ -7,6 +7,12 @@
 }
 
 .container {
+  width: 80%;
+  height: 100%;
+  margin: 0px auto;
+}
+
+.container {
   height: 50px;
   line-height: 50px;
   border: 1px solid #dedede;

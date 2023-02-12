@@ -1,0 +1,33 @@
+@import "reset";
+
+body{
+    background-color: #505068;
+}
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px;
+    background-color: #fff;
+    border-radius: 10px;
+    border-top-right-radius: 0 ;
+    border-top-left-radius: 0;
+}
+.menu{
+    display: flex;
+    font-weight: bold;
+    li{
+        text-align: center;
+        margin-left: 10px;
+        // 消除左邊距
+        &:first-child{
+            margin-left: 0;
+        }
+        &:hover{
+            color: #e48912;
+        }
+    }
+    .en{
+        font-size: 5px;
+    }
+}
