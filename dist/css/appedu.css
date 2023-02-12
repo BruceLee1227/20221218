@@ -42,24 +42,35 @@ body {
   border-top-right-radius: 0;
   border-top-left-radius: 0;
 }
-
-.menu {
+.header .menu {
   display: flex;
   font-weight: bold;
   font-size: 20px;
 }
-.menu li {
+.header .menu li {
   text-align: center;
   margin-left: 10px;
 }
-.menu li:first-child {
+.header .menu li:first-child {
   margin-left: 0;
 }
-.menu li:hover {
+.header .menu li:hover {
   color: #e48912;
 }
-.menu .en {
+.header .menu .en {
   font-size: 12px;
   text-transform: uppercase;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.join-form {
+  min-height: 100vh;
+  background-image: url(../images/banner.jpeg);
+  background-size: cover;
+}
+.join-form .join-form-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 100vh;
 }/*# sourceMappingURL=appedu.css.map */

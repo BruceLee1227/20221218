@@ -20,25 +20,36 @@ body{
         border-top-right-radius: 0 ;
         border-top-left-radius: 0;
     }
-}
-.menu{
-    display: flex;
-    font-weight: bold;
-    font-size: 20px;
-    li{
-        text-align: center;
-        margin-left: 10px;
-        // 消除左邊距
-        &:first-child{
-            margin-left: 0;
+    .menu{
+        display: flex;
+        font-weight: bold;
+        font-size: 20px;
+        li{
+            text-align: center;
+            margin-left: 10px;
+            // 消除左邊距
+            &:first-child{
+                margin-left: 0;
+            }
+            &:hover{
+                color: #e48912;
+            }
         }
-        &:hover{
-            color: #e48912;
+        .en{
+            font-size: 12px;
+            text-transform: uppercase;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
     }
-    .en{
-        font-size: 12px;
-        text-transform: uppercase;
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.join-form{
+    min-height: 100vh;
+    background-image: url(../images/banner.jpeg);
+    background-size: cover;
+    .join-form-content{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        min-height: 100vh;
     }
 }
