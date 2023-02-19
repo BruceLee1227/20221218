@@ -117,7 +117,6 @@ a {
 
 body {
   background-color: #505068;
-  height: 1000vh;
 }
 
 .header {
@@ -187,6 +186,7 @@ body {
   display: flex;
   background-color: rgba(14, 50, 80, 0.9);
   width: 100%;
+  border-radius: 10px;
 }
 .join-form .join-form-content .content-wrap > div {
   width: 50%;
@@ -229,6 +229,17 @@ body {
 
 .flow {
   margin-top: 50px;
+  position: relative;
+  top: 0;
+}
+.flow::before {
+  content: "";
+  border-left: 8px dashed blue;
+  height: 100%;
+  left: 50%;
+  margin-left: -4px;
+  position: absolute;
+  z-index: 1;
 }
 .flow .flow-item {
   display: flex;
@@ -237,19 +248,13 @@ body {
   position: relative;
   padding: 20px 0;
 }
-.flow .flow-item::before {
-  content: "";
-  border-left: 2px dashed blue;
-  height: 100%;
-  position: absolute;
-  z-index: 1;
-}
 .flow .flow-item:nth-child(even) .flow-text {
   right: 50%;
   left: unset;
   margin-right: 60px;
   margin-left: unset;
   background-color: #10941b;
+  text-align: right;
 }
 .flow .flow-item:nth-child(even) .flow-circle {
   background-color: yellow;
@@ -263,6 +268,8 @@ body {
   z-index: 2;
 }
 .flow .flow-text {
+  font-size: 20px;
+  font-weight: bolder;
   background-color: #109494;
   color: white;
   padding: 20px;
@@ -270,4 +277,10 @@ body {
   position: absolute;
   left: 50%;
   margin-left: 60px;
+}
+
+.footer {
+  background: #fff;
+  padding: 50px 0;
+  text-align: right;
 }/*# sourceMappingURL=appedu.css.map */
