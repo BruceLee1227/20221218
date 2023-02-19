@@ -21,6 +21,32 @@ a {
   color: inherit;
 }
 
+.slogan {
+  text-align: center;
+  font-size: 26px;
+  margin-bottom: 20px;
+  position: relative;
+}
+.slogan::after {
+  content: "";
+  position: absolute;
+  height: 3px;
+  width: 0;
+  border-left: 100px solid #da7272;
+  border-right: 180px solid #66cca5;
+  bottom: -10px;
+}
+
+.join-form-text {
+  font-size: 14px;
+  line-height: 30px;
+  text-align: justify;
+}
+
+.form-control-item {
+  margin-bottom: 15px;
+}
+
 .container {
   height: 50px;
   line-height: 50px;
