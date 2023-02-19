@@ -1,0 +1,24 @@
+@import 'reset';
+body{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.rotate{
+    width: 150px;
+    height: 150px;
+    margin-top: 50px;
+    background-color: red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    transform: rotate(45deg);
+    .spring{
+        font-size: 100px;
+        font-weight: bolder;
+        transform: rotate(315deg);
+    }
+}
