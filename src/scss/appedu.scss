@@ -10,6 +10,7 @@ body{
     position: fixed;
     top: 0;
     left: 0;
+    z-index: 5;
     .header-content{
         display: flex;
         align-items: center;
@@ -43,13 +44,33 @@ body{
     }
 }
 .join-form{
-    min-height: 100vh;
+    // min-height: 100vh;
+    background: #000;
     background-image: url(../images/banner.jpeg);
     background-size: cover;
+    color: #fff;
     .join-form-content{
         display: flex;
-        justify-content: space-between;
+        // justify-content: space-between;
         align-items: center;
         min-height: 100vh;
+        >div{
+            width: 50%;
+            // flex: 1;
+            background-color: rgba(14, 50, 80, 0.9);
+            padding: 20px;
+            position: relative;
+            &:first-child::before{
+                content:"";
+                border: 1px dashed red;
+                height: 100%;
+                position: absolute;
+                right: 10px;
+                top: 20px;
+                // 內距20px
+                height: calc(100% - 40px);
+                // 上下內距20px
+            }
+        }
     }
 }

@@ -31,6 +31,7 @@ body {
   position: fixed;
   top: 0;
   left: 0;
+  z-index: 5;
 }
 .header .header-content {
   display: flex;
@@ -64,13 +65,28 @@ body {
 }
 
 .join-form {
-  min-height: 100vh;
+  background: #000;
   background-image: url(../images/banner.jpeg);
   background-size: cover;
+  color: #fff;
 }
 .join-form .join-form-content {
   display: flex;
-  justify-content: space-between;
   align-items: center;
   min-height: 100vh;
 }
+.join-form .join-form-content > div {
+  width: 50%;
+  background-color: rgba(14, 50, 80, 0.9);
+  padding: 20px;
+  position: relative;
+}
+.join-form .join-form-content > div:first-child::before {
+  content: "";
+  border: 1px dashed red;
+  height: 100%;
+  position: absolute;
+  right: 10px;
+  top: 20px;
+  height: calc(100% - 40px);
+}/*# sourceMappingURL=appedu.css.map */
