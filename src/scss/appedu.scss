@@ -117,6 +117,7 @@ body{
 
 }
 .flow{
+    margin-top: 50px;
     .flow-item{
         display: flex;
         justify-content: center;
@@ -129,6 +130,18 @@ body{
             height: 100%;
             position: absolute;
             z-index: 1;
+        }
+        &:nth-child(even){
+            .flow-text{
+                right: 50%; 
+                left: unset;
+                margin-right: 60px;
+                margin-left: unset;
+                background-color: #10941b;
+            }
+            .flow-circle{
+                background-color: yellow;
+            }
         }
     }
     .flow-circle{

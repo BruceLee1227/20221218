@@ -227,6 +227,9 @@ body {
   z-index: 2;
 }
 
+.flow {
+  margin-top: 50px;
+}
 .flow .flow-item {
   display: flex;
   justify-content: center;
@@ -240,6 +243,16 @@ body {
   height: 100%;
   position: absolute;
   z-index: 1;
+}
+.flow .flow-item:nth-child(even) .flow-text {
+  right: 50%;
+  left: unset;
+  margin-right: 60px;
+  margin-left: unset;
+  background-color: #10941b;
+}
+.flow .flow-item:nth-child(even) .flow-circle {
+  background-color: yellow;
 }
 .flow .flow-circle {
   width: 30px;
