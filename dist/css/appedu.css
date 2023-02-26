@@ -115,6 +115,10 @@ a {
   display: inline-block;
 }
 
+html, body {
+  scroll-behavior: smooth;
+}
+
 body {
   background-color: #505068;
 }
