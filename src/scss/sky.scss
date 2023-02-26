@@ -1,0 +1,53 @@
+@import 'reset';
+body{
+    background-color: rgb(78, 78, 241);
+}
+$clound-color: #f3efef;
+.clound{
+    width: 500px;
+    height: 200px;
+    background-color: $clound-color;
+    border-radius: 100px;
+    transform: translateX(10%) translateY(15vh);
+    &::after{
+        content: "";
+        display: block;
+        width: 180px;
+        height: 210px;
+        border-radius: 50%;
+        background-color: $clound-color;
+        position: absolute;
+        top: -70px;
+        left: 230px;
+    }
+    &::before{
+        content: "";
+        display: block;
+        width: 168px;
+        height: 200px;
+        border-radius: 50%;
+        background-color: $clound-color;
+        position: absolute;
+        top: -95px;
+        left: 75px; 
+    }
+    &.s1{
+        transform: translate(10%, 15vh);
+        animation-name: move1;
+        animation-duration: 2s;
+    }
+    &.s2{
+        transform: translate(10%, 30vh);
+    }
+    &.s3{
+        transform: translate(10%, 45vh);
+    }
+}
+@keyframes move1{
+    from{
+        transform: translate(10%, 15vh);
+    }
+    to{
+        transform: translate(60%, 15vh);
+    }
+}
