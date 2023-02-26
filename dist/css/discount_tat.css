@@ -163,6 +163,10 @@ a {
 .product .product-img:hover .product-img-wrap {
   transform: scale(2.5);
 }
+.product .product-img:hover .discount-tag {
+  background-color: #4d3535;
+  color: white;
+}
 .product .product-text {
   margin-top: 15px;
 }
