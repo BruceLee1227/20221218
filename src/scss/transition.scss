@@ -1,0 +1,47 @@
+@import "reset";
+.container{
+    padding-top: 20px;
+    #switch-status{
+        display: none;
+    }
+    .block{
+        background-color: #5ba75f;
+        width: 100px;
+        height: 100px;
+        color: black;
+        cursor: pointer;
+        padding: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: 1.5s;
+        transition-property: background;
+        position: relative;
+        left: 0;
+        // >label{
+
+        // }
+        &:hover{
+            background-color: #d65454;
+            color: white;
+            font-size: 30px;
+        }
+    }
+    .func-block{
+        margin-top: 10px;
+        >label{
+            user-select: none;
+            padding: 10px 20px;
+            background-color: #dedede;
+            font-weight: 800;
+            border-radius: 5px;
+            cursor: pointer;
+            &.run{
+                display: block;
+            }
+            &.back{
+                display: none;
+            }
+        }
+    }
+}
