@@ -1,5 +1,7 @@
 @import "reset";
-
+html,body{
+    scroll-behavior: smooth;
+}
 body{
     background-color: #505068;
     // height: 1000vh;
