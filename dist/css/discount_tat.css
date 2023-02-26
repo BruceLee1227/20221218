@@ -117,13 +117,16 @@ a {
 
 .product-block {
   margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .product {
   width: 300px;
-  height: 600px;
+  min-height: 200px;
   background-color: #f5d4d4;
   padding: 15px;
+  margin: 15px;
 }
 .product .product-img {
   background-color: #c04b4b;
@@ -136,6 +139,22 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+.product .product-img .discount-tag {
+  background-color: #0019f7;
+  width: 100%;
+  padding: 10px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: rotate(45deg);
+  position: absolute;
+  right: -100px;
+  top: 10px;
+  font-family: "Shantell Sans", cursive;
 }
 .product .product-text {
   margin-top: 15px;
