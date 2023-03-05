@@ -3,9 +3,9 @@
     display: flex;
     flex-direction: column;
     cursor: pointer;
-
+    width: 30px;
     >span {
-        display: inline-block;
+        // display: inline-block;
         width: 30px;
         height: 5px;
         background: #5f5757;
@@ -26,10 +26,22 @@
 }
 
 #mobile-icon-switch{
-    display: none;
+    // display: none;
+    position: relative;
     &:checked{
         ~.mobile-icon{
-            background-color: #365fe9;
+            >span{
+                position: absolute;
+                &:first-child{
+                    transform: rotate(45deg);
+                }
+                &:last-child{
+                    transform: rotate(-45deg);
+                }
+                &:nth-child(2){
+                    display: none;
+                }
+            }
         }
     }
 }

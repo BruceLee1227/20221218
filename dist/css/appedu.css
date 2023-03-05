@@ -294,9 +294,9 @@ body {
   display: flex;
   flex-direction: column;
   cursor: pointer;
+  width: 30px;
 }
 .mobile-icon > span {
-  display: inline-block;
   width: 30px;
   height: 5px;
   background: #5f5757;
@@ -312,8 +312,17 @@ body {
 }
 
 #mobile-icon-switch {
-  display: none;
+  position: relative;
 }
-#mobile-icon-switch:checked ~ .mobile-icon {
-  background-color: #365fe9;
+#mobile-icon-switch:checked ~ .mobile-icon > span {
+  position: absolute;
+}
+#mobile-icon-switch:checked ~ .mobile-icon > span:first-child {
+  transform: rotate(45deg);
+}
+#mobile-icon-switch:checked ~ .mobile-icon > span:last-child {
+  transform: rotate(-45deg);
+}
+#mobile-icon-switch:checked ~ .mobile-icon > span:nth-child(2) {
+  display: none;
 }/*# sourceMappingURL=appedu.css.map */
