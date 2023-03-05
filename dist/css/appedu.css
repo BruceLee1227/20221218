@@ -290,29 +290,30 @@ body {
 }
 
 .mobile-icon {
-  display: none;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+}
+.mobile-icon > span {
+  display: inline-block;
+  width: 30px;
+  height: 5px;
+  background: #5f5757;
+  margin-bottom: 5px;
+  transition-property: background-color;
+  transition-duration: 0.5s;
+}
+.mobile-icon > span:last-child {
+  margin-bottom: 0;
+}
+.mobile-icon:hover > span {
+  background: red;
 }
 
-@media screen and (max-width: 800px) {
-  .mobile-icon {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    cursor: pointer;
-  }
-  .mobile-icon > span {
-    display: inline-block;
-    width: 30px;
-    height: 5px;
-    background: #5f5757;
-    margin-bottom: 5px;
-    transition-property: background-color;
-    transition-duration: 0.5s;
-  }
-  .mobile-icon > span:last-child {
-    margin-bottom: 0;
-  }
-  .mobile-icon:hover > span {
-    background: red;
-  }
+#mobile-icon-switch {
+  display: none;
+}
+#mobile-icon-switch:checked ~ .mobile-icon {
+  background-color: #365fe9;
 }/*# sourceMappingURL=appedu.css.map */
