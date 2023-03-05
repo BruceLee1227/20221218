@@ -287,32 +287,4 @@ body {
   background: #fff;
   padding: 50px 0;
   text-align: right;
-}
-
-.mobile-icon {
-  display: none;
-}
-
-@media screen and (max-width: 800px) {
-  .mobile-icon {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    cursor: pointer;
-  }
-  .mobile-icon > span {
-    display: inline-block;
-    width: 30px;
-    height: 5px;
-    background: #5f5757;
-    margin-bottom: 5px;
-    transition-property: background-color;
-    transition-duration: 0.5s;
-  }
-  .mobile-icon > span:last-child {
-    margin-bottom: 0;
-  }
-  .mobile-icon:hover > span {
-    background: red;
-  }
-}/*# sourceMappingURL=appedu.css.map */
+}/*# sourceMappingURL=appedu_rwd.css.map */

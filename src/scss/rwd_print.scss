@@ -1,0 +1,43 @@
+@import 'reset';
+
+.tittle{
+    margin: 15px auto;
+    text-align: center;
+    font-size: 50px;
+}
+.fn{
+    margin: 15px;
+    text-align: right;
+    .print{
+        background-color: #f01010;
+        padding: 10px;
+        color: white;
+        border: 0;
+    }
+}
+.student-table{
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+
+    th,td{
+        padding: 10px;
+        border: 1px solid rgb(131, 127, 127);
+    }
+    th{
+        background-color: #3572ac;
+        color:aliceblue
+    }
+    tr td:first-child{
+        text-align: center;
+    }
+    tr td:last-child{
+        text-align: right;
+    }
+}
+
+@media print {
+    .fn{
+        display: none;
+    }
+}
