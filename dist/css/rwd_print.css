@@ -131,6 +131,9 @@ a {
   color: white;
   border: 0;
 }
+.fn .print {
+  cursor: pointer;
+}
 
 .student-table {
   width: 100%;
@@ -156,4 +159,4 @@ a {
   .fn {
     display: none;
   }
-}/*# sourceMappingURL=rwd_print.css.map */
+}

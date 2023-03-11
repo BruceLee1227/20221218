@@ -11,7 +11,7 @@
     <div class="container">
         <h3 class="tittle">成績單</h3>
         <div class="fn">
-            <button class="print">列印</button>
+            <button class="print" id="print-btn">列印</button>
         </div>
         <table class="student-table">
             <thead>
@@ -41,4 +41,12 @@
         </table>
     </div>    
 </body>
+<script>
+    let btn=document.querySelector('#print-btn');
+    if (btn){
+        btn.addEventListener('click',()=>{
+            window.print();
+        })
+    }
+</script>
 </html>
