@@ -51,7 +51,7 @@
     }
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 700px) {
     .mobile-icon{
         display: flex;
     }
@@ -137,6 +137,26 @@
         }
         .right-side{
             width: 100%;
+        }
+    }
+    .flow{
+        &::before{
+            left: 30px
+        }
+        .flow-item{
+            justify-content: flex-start;
+            left: 15px;
+            margin-bottom: 50px;
+        }
+        &:nth-child(even) .flow-text{
+            right: unset;
+            left: 0;
+            text-align: left;
+            margin-right: 0;
+            margin-left: 72px;
+        }
+        .flow-text{
+            left: 0;
         }
     }
 }
