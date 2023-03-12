@@ -31,6 +31,34 @@
     let n7=n4+parseInt(n5,10);
     console.log(n6);
     console.log(n7);
+
+    //陣列
+    let a1=[98,80,70,60,50];
+    a1.push(87);
+    a1.join(':');
+    // let index= a1.indexOf(70);
+    // console.log(index);
+
+    console.log(a1);
+
+    // 物件
+    let students=[]
+    students.push({
+        name:"Bruce",
+        score:80
+    });
+    students.push({
+        name:"Chen",
+        score:57
+    });
+    students.push({
+        name:"Lai",
+        score:69
+    });
+    console.log(students);
+    students.forEach((students,index)=>{
+        console.log(`第${index+1}位姓名是:${students.name}`)
+    })
 </script>
 <!-- <script src="js/Js-base.js"></script> -->
 </html>
