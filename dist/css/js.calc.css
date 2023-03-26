@@ -113,4 +113,40 @@ a {
 .form-control-item .form-control-append .btn {
   height: 100%;
   display: inline-block;
+}
+
+.calc {
+  margin-top: 20px;
+}
+
+.calc-total {
+  background-color: black;
+  color: white;
+  text-align: right;
+  padding: 5px;
+  font-size: 50px;
+}
+
+.calc-row {
+  display: flex;
+  align-items: center;
+  flex: 2;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+.calc-row > div {
+  background-color: #a89696;
+  font-size: 30px;
+  text-align: center;
+  color: black;
+  border: 1px solid white;
+  flex: 1;
+  padding: 5px;
+}
+.calc-row > div:last-child {
+  background-color: #e4d8d8;
+}
+.calc-row > div:hover {
+  background-color: red;
 }/*# sourceMappingURL=js.calc.css.map */

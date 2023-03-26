@@ -1,1 +1,37 @@
 @import 'reset';
+
+.calc{
+    margin-top: 20px;
+    
+}
+
+.calc-total{
+    background-color: black;
+    color: white;
+    text-align: right;
+    padding: 5px;
+    font-size: 50px;
+}
+
+.calc-row{
+    display: flex;
+    align-items: center;
+    flex: 2;
+    user-select: none;
+    >div{
+        background-color: #a89696;
+        font-size: 30px;
+        text-align: center;
+        color: black;
+        border: 1px solid white;
+        flex: 1;
+        padding: 5px;
+        &:last-child{
+            background-color: #e4d8d8;
+        }
+        &:hover{
+            background-color: red;
+        }
+    }
+    
+}
