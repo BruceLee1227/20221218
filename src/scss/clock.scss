@@ -1,0 +1,17 @@
+@import 'reset';
+.clock{
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    >div{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex: 1;
+        background-color: #533b80;
+        border: 1px solid white;
+        color:white;
+        height: 80px;
+    }
+}
