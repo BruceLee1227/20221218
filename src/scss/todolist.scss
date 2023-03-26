@@ -1,0 +1,14 @@
+@import 'reset';
+.container{
+    margin-top: 20px;
+}
+ul{
+    >li{
+        display: flex;
+    }
+}
+
+.delete{
+    color: red;
+    text-decoration: line-through;
+}
