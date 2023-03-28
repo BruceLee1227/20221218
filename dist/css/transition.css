@@ -145,9 +145,7 @@ a {
   margin-top: 10px;
 }
 .container .func-block > label {
-  -webkit-user-select: none;
-     -moz-user-select: none;
-          user-select: none;
+  user-select: none;
   padding: 10px 20px;
   background-color: #dedede;
   font-weight: 800;
@@ -159,4 +157,4 @@ a {
 }
 .container .func-block > label.back {
   display: none;
-}/*# sourceMappingURL=transition.css.map */
+}

@@ -1,47 +1,43 @@
 *,
-*::before,
-*::after {
+*::after,
+*::before {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  font-size: 16px;
+}
+
+html,
+body {
+  scroll-behavior: smooth;
 }
 
 .container {
   width: 80%;
   height: 100%;
-  margin: 0px auto;
-}
-
-ul {
-  list-style-type: none;
+  margin: auto;
 }
 
 a {
-  text-decoration: none;
   color: inherit;
+  text-decoration: none;
 }
 
 .slogan {
+  font-size: 24px;
   text-align: center;
-  font-size: 26px;
-  margin-bottom: 20px;
   position: relative;
+  margin-bottom: 20px;
 }
 .slogan::after {
   content: "";
   position: absolute;
-  left: calc(50% - 140px);
-  height: 3px;
-  width: 0;
-  border-left: 100px solid #da7272;
-  border-right: 180px solid #66cca5;
   bottom: -10px;
-}
-
-.join-form-text {
-  font-size: 14px;
-  line-height: 30px;
-  text-align: justify;
+  left: calc(50% - 140px);
+  width: 0;
+  height: 3px;
+  border-left: solid 100px #1072c2;
+  border-right: solid 180px #fff;
 }
 
 .form-control {
@@ -51,23 +47,36 @@ a {
   outline: 0;
   padding: 0 15px;
   border-radius: 8px;
+  font-size: 18px;
+}
+.form-control:focus {
+  background: #1c54bd;
+  color: #fff;
+}
+.form-control:focus::placeholder {
+  color: rgb(204, 204, 204);
 }
 
-.btn {
+.button {
   padding: 8px 20px;
   border: 0;
   border-radius: 8px;
   font-weight: 800;
-  position: absolute;
-  right: 0;
+  cursor: pointer;
 }
-.btn.primary {
-  background: #c786ec;
+.button.primary {
+  background: #8110c2;
   color: #fff;
 }
-.btn.danger {
-  background-color: red;
-  color: white;
+.button.primary:hover {
+  background-color: #6e09a8;
+}
+.button.danger {
+  background: rgb(218, 49, 27);
+  color: #fff;
+}
+.button.danger:hover {
+  background-color: rgb(172, 33, 15);
 }
 
 .text-right {
@@ -80,28 +89,27 @@ a {
 .form-control-item.form-control-mixed {
   position: relative;
 }
-.form-control-item.form-control-mixed .form-control-append {
-  position: absolute;
-  top: 0;
-  height: 100%;
+.form-control-item.form-control-mixed .form-control {
+  width: calc(100% - 1px);
 }
 .form-control-item.form-control-mixed.after .form-control {
   padding-right: 80px;
 }
 .form-control-item.form-control-mixed.after .form-control-append {
-  right: -1px;
+  right: 0;
 }
-.form-control-item.form-control-mixed.after .form-control-append .btn {
+.form-control-item.form-control-mixed.after .form-control-append .button {
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
 }
 .form-control-item.form-control-mixed.before .form-control {
   padding-left: 80px;
+  margin-left: 1px;
 }
 .form-control-item.form-control-mixed.before .form-control-append {
-  left: -1px;
+  left: 0;
 }
-.form-control-item.form-control-mixed.before .form-control-append .btn {
+.form-control-item.form-control-mixed.before .form-control-append .button {
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;
 }
@@ -110,62 +118,58 @@ a {
   top: 0;
   height: 100%;
 }
-.form-control-item .form-control-append .btn {
+.form-control-item .form-control-append .button {
   height: 100%;
   display: inline-block;
 }
 
-html, body {
-  scroll-behavior: smooth;
-}
-
 body {
-  background-color: #505068;
+  background: #000;
 }
 
 .header {
-  width: 100%;
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 10;
+  width: 100%;
+  z-index: 9;
 }
 .header .header-content {
+  background: #fff;
   display: flex;
-  align-items: center;
   justify-content: space-between;
+  align-items: center;
   padding: 20px;
-  background-color: #fff;
   border-radius: 10px;
   border-top-right-radius: 0;
   border-top-left-radius: 0;
 }
 .header .menu ul {
+  list-style-type: none;
   display: flex;
-  font-weight: bold;
-  font-size: 20px;
 }
 .header .menu ul li {
-  text-align: center;
   margin-left: 10px;
+  font-weight: 700;
+  text-align: center;
 }
 .header .menu ul li:first-child {
   margin-left: 0;
 }
 .header .menu ul li:hover {
-  color: #e48912;
+  color: rgb(47, 47, 255);
 }
 .header .menu ul .en {
   font-size: 12px;
+  font-family: monospace;
   text-transform: uppercase;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .join-form {
+  color: #fff;
   background: #000;
   background-image: url(../images/banner.jpeg);
   background-size: cover;
-  color: #fff;
   position: relative;
   z-index: 1;
 }
@@ -176,7 +180,7 @@ body {
   position: absolute;
   top: 0;
   left: 0;
-  background-color: rgba(114, 112, 112, 0.658);
+  background: rgba(0, 0, 0, 0.438);
   z-index: 1;
 }
 .join-form .join-form-content {
@@ -187,10 +191,9 @@ body {
   z-index: 2;
 }
 .join-form .join-form-content .content-wrap {
+  background: rgba(14, 50, 80, 0.9);
   display: flex;
-  background-color: rgba(14, 50, 80, 0.9);
   width: 100%;
-  border-radius: 10px;
 }
 .join-form .join-form-content .content-wrap > div {
   width: 50%;
@@ -199,22 +202,26 @@ body {
 }
 .join-form .join-form-content .content-wrap > div:first-child::before {
   content: "";
-  border: 1px dashed red;
-  height: 100%;
+  border-right: 3px dashed #fff;
   position: absolute;
   right: 0px;
   top: 20px;
   height: calc(100% - 40px);
 }
+.join-form .join-form-text {
+  font-size: 14px;
+  line-height: 30px;
+  text-align: justify;
+}
 
 .process-flow {
-  background-color: black;
+  background: #000;
   background-image: url(../images/process.jpeg);
-  height: 100vh;
   background-size: cover;
   background-position: center center;
   position: relative;
   z-index: 1;
+  color: #fff;
 }
 .process-flow::after {
   content: "";
@@ -223,27 +230,31 @@ body {
   position: absolute;
   top: 0;
   left: 0;
-  background-color: rgba(114, 112, 112, 0.658);
+  background: rgba(0, 0, 0, 0.438);
   z-index: 1;
 }
 .process-flow .process-wrap {
   position: relative;
   z-index: 2;
+  min-height: 50vh;
+  padding-top: 40px;
+  padding-bottom: 40px;
 }
 
 .flow {
   margin-top: 50px;
   position: relative;
-  top: 0;
+  padding: 20px 0;
 }
-.flow::before {
+.flow::after {
   content: "";
-  border-left: 8px dashed blue;
+  border-left: 6px dashed #fff;
   height: 100%;
-  left: 50%;
-  margin-left: -4px;
   position: absolute;
   z-index: 1;
+  top: 0;
+  left: 50%;
+  margin-left: -3px;
 }
 .flow .flow-item {
   display: flex;
@@ -251,36 +262,31 @@ body {
   align-items: center;
   position: relative;
   padding: 20px 0;
+  margin-bottom: 15px;
+  z-index: 2;
 }
 .flow .flow-item:nth-child(even) .flow-text {
   right: 50%;
   left: unset;
-  margin-right: 60px;
+  margin-right: 72px;
   margin-left: unset;
-  background-color: #10941b;
   text-align: right;
 }
-.flow .flow-item:nth-child(even) .flow-circle {
-  background-color: yellow;
-}
 .flow .flow-circle {
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
-  background-color: red;
+  width: 36px;
+  height: 36px;
+  border-radius: 50px;
+  background: red;
   position: relative;
   z-index: 2;
 }
 .flow .flow-text {
-  font-size: 20px;
-  font-weight: bolder;
-  background-color: #109494;
-  color: white;
+  position: absolute;
+  background: blue;
   padding: 20px;
   border-radius: 10px;
-  position: absolute;
   left: 50%;
-  margin-left: 60px;
+  margin-left: 72px;
 }
 
 .footer {
@@ -296,12 +302,11 @@ body {
   flex-direction: column;
   cursor: pointer;
   width: 30px;
-  position: relative;
 }
 .mobile-icon > span {
   width: 30px;
   height: 5px;
-  background: #5f5757;
+  background: #000;
   margin-bottom: 5px;
   transition-property: background-color transform;
   transition-duration: 0.5s;
@@ -313,47 +318,47 @@ body {
   background: red;
 }
 
-#mobile-icon-switch {
-  display: flex;
+#mobile-menu-switch {
   display: none;
 }
-#mobile-icon-switch:checked ~ .mobile-icon > span {
+#mobile-menu-switch:checked ~ .mobile-icon > span {
+  background-color: red;
   position: absolute;
 }
-#mobile-icon-switch:checked ~ .mobile-icon > span:first-child {
+#mobile-menu-switch:checked ~ .mobile-icon > span:first-child {
   top: -5px;
   transform: rotate(45deg);
 }
-#mobile-icon-switch:checked ~ .mobile-icon > span:last-child {
+#mobile-menu-switch:checked ~ .mobile-icon > span:nth-child(2) {
+  display: none;
+}
+#mobile-menu-switch:checked ~ .mobile-icon > span:last-child {
   top: -5px;
   transform: rotate(-45deg);
 }
-#mobile-icon-switch:checked ~ .mobile-icon > span:nth-child(2) {
-  display: none;
-}
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 720px) {
   .mobile-icon {
     display: flex;
   }
   .header .menu {
     display: none;
   }
-  #mobile-icon-switch:checked ~ .menu {
+  #mobile-menu-switch:checked ~ .menu {
     display: block;
   }
-  #mobile-icon-switch:checked ~ .menu li {
+  #mobile-menu-switch:checked ~ .menu li {
     margin-left: 0;
     margin-bottom: 15px;
   }
-  #mobile-icon-switch:checked ~ .menu li:last-child {
+  #mobile-menu-switch:checked ~ .menu li:last-child {
     margin-bottom: 0;
   }
-  #mobile-icon-switch:checked ~ .menu.extend ul {
-    background-color: #fff;
-    width: 80%;
+  #mobile-menu-switch:checked ~ .menu.extend ul {
     position: absolute;
-    top: 70px;
+    top: 75px;
+    background: #fff;
+    width: 80%;
     left: 10%;
     border-radius: 10px;
     border-top-right-radius: 0;
@@ -361,30 +366,30 @@ body {
     padding-top: 15px;
     flex-direction: column;
   }
-  #mobile-icon-switch:checked ~ .menu.popup {
+  #mobile-menu-switch:checked ~ .menu.popup {
     position: fixed;
     width: 100%;
     height: 100vh;
     left: 0;
     top: 0;
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
   }
-  #mobile-icon-switch:checked ~ .menu.popup::after {
+  #mobile-menu-switch:checked ~ .menu.popup::after {
     content: "";
     position: absolute;
     top: 0;
     left: 0;
     z-index: 1;
-    background-color: rgba(0, 0, 0, 0.2941176471);
+    background: rgba(0, 0, 0, 0.337254902);
     width: 100%;
     height: 100%;
   }
-  #mobile-icon-switch:checked ~ .menu.popup ul {
+  #mobile-menu-switch:checked ~ .menu.popup ul {
     width: 80%;
     position: relative;
-    background-color: #fff;
+    background: #fff;
     z-index: 2;
     padding: 20px;
     display: flex;
@@ -395,9 +400,9 @@ body {
   }
   .join-form .join-form-content .content-wrap > div:first-child::before {
     border-right: 0;
-    border-left: 0;
-    border-top: 0;
-    border-bottom: 5px dashed red;
+    border-bottom: 3px dashed #fff;
+    right: unset;
+    top: unset;
     left: 20px;
     bottom: 0;
     width: calc(100% - 40px);
@@ -408,20 +413,19 @@ body {
   .join-form .join-form-content .content-wrap .right-side {
     width: 100%;
   }
-  .flow::before {
+  .flow::after {
     left: 30px;
   }
   .flow .flow-item {
     justify-content: flex-start;
-    left: 15px;
-    margin-bottom: 50px;
+    padding-left: 12px;
   }
-  .flow:nth-child(even) .flow-text {
+  .flow .flow-item:nth-child(even) .flow-text {
     right: unset;
     left: 0;
-    text-align: left;
     margin-right: 0;
     margin-left: 72px;
+    text-align: left;
   }
   .flow .flow-text {
     left: 0;

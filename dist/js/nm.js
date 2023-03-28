@@ -1,4 +1,4 @@
-// console.log(153);
+ // console.log(153);
 
 const calc = function (n1, n2) {
     let tbody = document.querySelector('#display-table tbody');

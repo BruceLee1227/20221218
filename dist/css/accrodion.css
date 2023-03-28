@@ -136,9 +136,7 @@ a {
   font-weight: bold;
   font-family: "Times New Roman", Times, serif;
   cursor: pointer;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-          user-select: none;
+  user-select: none;
 }
 .container .accrodion .tab > label:hover {
   background-color: #865858;
@@ -167,4 +165,4 @@ a {
 }
 .container .accrodion .tab .switch:checked + label ~ .tab-container {
   display: block;
-}/*# sourceMappingURL=accrodion.css.map */
+}
