@@ -1,19 +1,4 @@
-@import 'reset';
-
-.number-block {
-    margin-top: 10px;
-
-    input {
-        border: 1px solid #000;
-        margin-top: 10px;
-        margin-bottom: 10px;
-    }
-}
-
-.fn {
-    text-align: right;
-}
-
+@import '_reset1';
 #response {
     border: 1px solid #dedede;
     padding: 20px;
