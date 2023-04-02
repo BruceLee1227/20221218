@@ -10,72 +10,107 @@
 
 </head>
 <body>
-    <div class="container">
-        <div class="input-group">
-            <label for="">Item</label>
-            <input type="text" ref="itemName">
-            <input type="text" ref="itemName" @keyup.enter="addItem">
-            <button @click="addItem">ADD</button>
-        </div>
-        <hr>
-        <div>
-            <ul id="item">
-                <!-- <li>
-                    <input type="checkbox">
-                    <div>11111</div>
-                <li v-for="(item, itemIndex) in items" @click="changeStatus(itemIndex)"
-                    :class="{delete: item.status == 'done'}">
-                    <input type="checkbox" :checked="item.status == 'done'">
-                    <div>{{ item.value }}</div>
-                </li>
-                <li class="delete">
-                    <input type="checkbox">
-                    <div>11111</div>
-                </li> -->
-            </ul>
+    <div id="app">
+        <div class="container">
+            <div class="input-group">
+                <label for="">Item</label>
+                <input type="text" ref="itemName" @keyup.enter="addItem">
+                <button @click="addItem">ADD</button>
+            </div>
+            <hr>
+            <div>
+                <ul id="item">
+                    <li v-for="(item, itemIndex) in items" @click="changeStatus(itemIndex)"
+                        :class="{delete: item.status == 'done'}">
+                        <input type="checkbox" :checked="item.status == 'done'">
+                        <div>{{ item.value }}</div>
+                        <button @click="removeItem(itemIndex)">刪除</button>
+                    </li>
+                </ul>
+            </div>
         </div>
     </div>
+</body>
     
 </body>
 <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 
 
 <script>
-    createApp({
-        data() {
-            return {
-                items: [
-                    { status: 'pending', value: 1111 },
-                    { status: 'done', value: 2222 },
-                ],
+   const { createApp } = Vue
+createApp({
+    data() {
+        return {
+            storageKey: 'todo',
+            items: [],
+        }
+    },
+    methods: {
+        addItem() {
+            if (!this.valid()) {
+                this.reset();
+                return;
+            }
+            // 新增資料
+            this.items.push({
+                status: 'pending',
+                value: this.getName()
+            })
+            this.reset();
+            this.save();
+        },
+        getName() {
+            if (this.$refs.itemName) {
+                return this.$refs.itemName.value;
+            }
+            return '';
+        },
+        valid() {
+            return (this.getName());
+        },
+        reset() {
+            let itemName = this.$refs.itemName;
+            if (itemName) {
+                itemName.value = '';
+                itemName.focus();
             }
         },
-        methods: {
-            addItem() {
-                if (!this.valid()) {
-                    this.reset();
-                    return;
-                }
-                // 新增資料
-                this.reset();
-            },
-            valid() {
-                return this.$refs.itemName && this.$refs.itemName.value;
-            },
-            reset() {
-                let itemName = this.$refs.itemName;
-                if (itemName) {
-                    itemName.value = '';
-                    itemName.focus();
-                }
-            },
-            changeStatus(index) {
-                let status = this.items[index].status == 'pending' ? 'done' : 'pending';
-                this.items[index].status = status;
-                console.table(this.items);
+        changeStatus(index) {
+            let item = this.items[index];
+            if (!item) {
+                return;
             }
+            let status = this.items[index].status == 'pending' ? 'done' : 'pending';
+            this.items[index].status = status;
+            this.save();
+            console.table(this.items);
+        },
+        removeItem(index) {
+            this.items.splice(index, 1);
+            this.save();
+        },
+        restore() {
+            try {
+                let todo = localStorage.getItem(this.storageKey);
+                if (!todo) {
+                    todo = [];
+                } else {
+                    todo = JSON.parse(todo);
+                }
+                this.items = todo;
+            } catch (e) {
+                this.items = [];
+            }
+        },
+        save() {
+            let data = JSON.stringify(this.items);
+            localStorage.setItem(this.storageKey, data);
         }
-    }).mount('#app')
+    },
+    mounted() {
+        this.restore();
+    }
+}).mount('#app')
 </script>
 
 </html>
