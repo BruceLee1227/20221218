@@ -53,6 +53,9 @@ a {
   background: #1c54bd;
   color: #fff;
 }
+.form-control:focus::-moz-placeholder {
+  color: rgb(204, 204, 204);
+}
 .form-control:focus::placeholder {
   color: rgb(204, 204, 204);
 }
@@ -430,4 +433,4 @@ body {
   .flow .flow-text {
     left: 0;
   }
-}
+}/*# sourceMappingURL=appedu_teacher.css.map */

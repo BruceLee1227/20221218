@@ -132,7 +132,9 @@ a {
   display: flex;
   align-items: center;
   flex: 2;
-  user-select: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
 }
 .calc-row > div {
   background-color: #a89696;
@@ -148,4 +150,4 @@ a {
 }
 .calc-row > div:hover {
   background-color: red;
-}
+}/*# sourceMappingURL=js.calc.css.map */

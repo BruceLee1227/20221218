@@ -53,6 +53,9 @@ a {
   background: #1c54bd;
   color: #fff;
 }
+.form-control:focus::-moz-placeholder {
+  color: rgb(204, 204, 204);
+}
 .form-control:focus::placeholder {
   color: rgb(204, 204, 204);
 }
@@ -139,4 +142,4 @@ a {
   font-size: 30px;
   font-weight: 700;
   color: blue;
-}
+}/*# sourceMappingURL=scorelevel.css.map */
